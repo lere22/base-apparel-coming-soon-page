@@ -92,7 +92,7 @@ p {
 }
 
 form {
-	margin-top: 2rem;
+	margin-top: 2.5rem;
 }
 
 /* Forms */
@@ -101,6 +101,11 @@ form {
 	position: relative;
 	width: 61%;
 	border: 1px solid var(--primary-desaturated-red);
+	border-radius: 50px;
+}
+
+.focus {
+	border: 2px solid var(--primary-soft-red);
 	border-radius: 50px;
 }
 
@@ -118,6 +123,7 @@ input::placeholder {
 }
 
 .btn-submit {
+	padding: 0.85rem 0;
 	z-index: 1;
 	background: var(--gradient-2);
 	min-width: 5.5rem;
@@ -165,8 +171,13 @@ input::placeholder {
 	text-align: center;
 	padding-left: 8rem;
 }
+
 .attribution a {
-	color: hsl(228, 45%, 44%);
+	color: var(--neutral-dark-grayish-red);
+}
+
+.attribution a:hover {
+	text-decoration: underline;
 }
 
 @media (max-width: 990px) {
