@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+:root {
+	/* Colors */
+	--white: #fff;
+	--success: #44d838;
+	--primary-desaturated-red: hsl(0, 36%, 70%);
+	--primary-soft-red: hsl(0, 93%, 68%);
+	--neutral-dark-grayish-red: hsl(0, 6%, 24%);
+	--gradient-1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+	--gradient-2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+	/* Typography */
+	--family-josefin-sans: "Josefin Sans", sans-serif;
+	--fw-300: 300;
+	--fw-400: 400;
+	--fw-600: 600;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+html {
+	font-size: 0.9375rem;
+}
+
+body {
+	min-height: 100vh;
+	font-family: var(--family-josefin-sans);
+	background: url(../images/bg-pattern-desktop.svg), var(--gradient-1);
+	display: grid;
+	grid-template-columns: 1.5fr 1fr;
+	grid-template-areas:
+		"header hero-content"
+		"main hero-content"
+		"footer hero-content";
+}
+
+.divider {
+	margin: 1.5rem 0;
+}
+
+header {
+	grid-area: header;
+	height: 100px;
+	padding-top: 3rem;
+	padding-left: 10rem;
+}
+
+.hero-content {
+	grid-area: hero-content;
+	background-image: url(../images/hero-desktop.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+main {
+	grid-area: main;
+	max-width: 800px;
+	padding-left: 10rem;
+	margin-top: 3rem;
+}
+
+h1 {
+	font-size: 3.8rem;
+	font-weight: var(--fw-400);
+	color: var(--neutral-dark-grayish-red);
+	text-transform: uppercase;
+	letter-spacing: 0.3em;
+	word-spacing: 100vw;
+	line-height: 1.1em;
+}
+
+h1 .text-color-pink {
+	font-weight: var(--fw-300);
+	color: var(--primary-desaturated-red);
+}
+
+p {
+	font-size: 1rem;
+	font-weight: var(--fw-400);
+	color: var(--primary-desaturated-red);
+	line-height: 1.7em;
+	width: 62%;
+}
+
+form {
+	margin-top: 2.5rem;
+}
+
+/* Forms */
+.form-group {
+	display: flex;
+	position: relative;
+	width: 61%;
+	border: 1px solid var(--primary-desaturated-red);
+	border-radius: 50px;
+}
+
+.focus {
+	border: 2px solid var(--primary-soft-red);
+	border-radius: 50px;
+}
+
+.form-group input {
+	background-color: transparent;
+	outline: 0;
+	padding: 1rem 0 1rem 2rem;
+	flex: auto;
+	transition: 0.2s;
+}
+
+input::placeholder {
+	font-family: var(--family-josefin-sans);
+	color: var(--primary-desaturated-red);
+}
+
+.btn-submit {
+	padding: 0.85rem 0;
+	z-index: 1;
+	background: var(--gradient-2);
+	min-width: 5.5rem;
+	border-radius: 50px;
+	cursor: pointer;
+	box-shadow: 0px 10px 20px rgba(179, 82, 82, 0.445);
+}
+
+.btn-submit img {
+	text-align: center;
+}
+
+.btn-submit:hover,
+.btn-submit:focus {
+	filter: brightness(1.2);
+	box-shadow: 0px 10px 20px rgba(88, 0, 0, 0.445);
+	color: var(--white);
+	outline: 0;
+}
+
+.alert-icon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 6.5rem;
+	display: none;
+}
+
+.alert-error {
+	color: var(--primary-soft-red);
+	margin-top: 0.5rem;
+	margin-left: 2rem;
+	text-align: left;
+}
+
+.alert-success {
+	color: var(--success);
+	margin-top: 0.5rem;
+	margin-left: 2rem;
+	text-align: left;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	padding-left: 8rem;
+}
+
+.attribution a {
+	color: var(--neutral-dark-grayish-red);
+}
+
+.attribution a:hover {
+	text-decoration: underline;
+}
+
+@media (max-width: 990px) {
+	body {
+		grid-template-columns: 100%;
+		grid-template-areas:
+			"header"
+			"hero-content"
+			"main"
+			"footer";
+	}
+
+	.hero-content {
+		min-height: 18rem;
+		background-image: url(../images/hero-mobile.jpg);
+		background-size: center;
+	}
+
+	header {
+		height: 90px;
+	}
+
+	header,
+	main {
+		padding: 2rem;
+		width: 100vw;
+		margin: 0 auto;
+	}
+
+	h1 {
+		margin-top: 2rem;
+		font-size: 2.8rem;
+		text-align: center;
+	}
+
+	p {
+		width: auto;
+		text-align: center;
+	}
+
+	.form-group {
+		width: auto;
+		margin: 0 auto;
+	}
+
+	.btn-submit {
+		min-width: 4.5rem;
+	}
+
+	.attribution {
+		padding: 0;
+	}
+}
