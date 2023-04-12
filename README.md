@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL here](https://your-solution-url.com)
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/base-apparel-coming-soon-page-with-css-grid-flexbox-and-javascript-gMO8cwU31r)
 - Live Site URL: [Live site URL here](https://lere22.github.io/base-apparel-coming-soon-page/)
 
 ## My process
